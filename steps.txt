@@ -1,0 +1,87 @@
+git init - this initializes the empty folder in the root directory 
+git add . -- tell git to keep track of this file  
+git commit -m "with message you wish  " -- permanently records the current snapshot with a message 
+
+before that you connect the local machine to the 
+
+git remote add origin https://github.com/YourName/awesome-app.git -- git remote add origin(reposotory on the git hub is called 
+origin by default)
+
+git branch -M main --earliest version of git had master for the branch and now that git has main  
+
+
+git push -u origin main  -- you will push this entire file to the repository on the git hub 
+
+git remote -v -- this command tells me what all remote connections this project has 
+origin  https://github.com/vinaysidda/demp_git.git (fetch)
+origin  https://github.com/vinaysidda/demp_git.git (push)
+(.venv) PS D:\MLOP+AI+Bootcamp\fastapi_rest_demo>
+
+
+git pull  -- Downloads new commits from the remote branch (origin/main) and merges them into your local branch.
+
+git fetch origin --Downloads only the latest commits from GitHub but does not modify your files.
+
+
+ git log origin/main - gives the recent log on the branch
+
+
+commit 47a52e38403f89722d8d0d478276a390caf407f1 (HEAD -> main, origin/main)
+Author: vinaysa <vinays@gmail.com>
+Date:   Tue Nov 18 02:31:54 2025 -0500
+
+    with new git steps
+
+commit 7c0e7a69152e12d52139225c5f3f2cd93b19394d
+Author: vinays <vinays@gmail.com>
+
+
+git pull --rebase  -- lets assume that i have new code on github after that with this command , you will pull the entire code
+and then remove any local commits that you have done do any commits from the remote and then add the local commits on top of that 
+
+
+git checkout -b feature/login    -- this commnad creates a new branch and then switch to new branch and best way ti  
+Switched to a new branch 'feature/login'
+
+git branch --show-current             :-shows which branch are you in now 
+
+
+# remove git metadata (the .git folder) - WARNING: this removes all git history for this working copy
+Remove-Item -Recurse -Force .git
+
+git init --bare -- git initializes an empty repository with everything but no tree
+
+ git clone central-repo.git alice
+
+ git remote set-url origin https://github.com/vinaysidda/Dumping_github_prac.git --  to change the repository
+  
+You create your new branch feature/login_bob origin/main starting from the latest commit on the remote branch (origin/main)
+
+other wise with just git check out -b feature/login_bob it will create a from the 
+starting commit of the local repository suppose if i am there is the repo of the feature/login (alice)
+
+
+Remove-Item -Recurse -Force .\fastapi_rest_demo\carol  this delte the particluar folder of git in local
+
+List local + remote branches
+git branch -a
+
+
+WHY REBASE IS BETTER THAN MERGE
+
+ex:- Merge branch 'main' into feature/login_bob
+
+History becomes messy.
+Keeps history clean and linear:  A → B → C → Bob1 → Bob2
+
+Now push the rebased branch to update remote (use safe force):
+git push --force-with-lease origin feature/login_bob
+--force-with-lease prevents you from accidentally overwriting someone else’s work.
+
+git push -u origin feature/login_bob --this is the command to push the code on to remote repo using the branch. 
+
+"AI is the broad field of building systems that perform tasks requiring human-like intelligence
+(reasoning, perception, language, planning). ML is a subset of AI that learns patterns from data  
+to make predictions or decisions. DL is a subset of ML that uses multi-layer neural networks to
+learn complex features automatically. Generative AI focuses on creating new content (text, images, code) 
+that resembles training data, often built on deep learning models like transformers or GAN"
